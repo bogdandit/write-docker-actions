@@ -2,9 +2,9 @@
 
 name: Docker Actions
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on: [push]
+on:
+  pull_request:
+    types: [labeled]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,6 +19,9 @@ jobs:
         
       - name: hello-action
         uses: ./.github/actions/hello-world
-        with:
-          firstGreeting: "Learning Lab User"
-          thirdGreeting: "The third optional parameter"
+#         with:
+#           firstGreeting: "Learning Lab User"
+#           thirdGreeting: "The third optional parameter"
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
