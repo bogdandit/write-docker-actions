@@ -1,4 +1,4 @@
-FROM node:15-stretch
+FROM node:lts-alpine3.9
 
 COPY package*.json ./
 
