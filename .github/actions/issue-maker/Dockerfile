@@ -2,11 +2,7 @@ FROM node:lts-alpine3.9
 
 COPY package*.json ./
 
-#RUN npm cache clean --force
-
 RUN npm install
-
-# RUN npm rebuild
 
 COPY . .
 
